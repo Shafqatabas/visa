@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+            display: none;
+        }
+        #result img {
+            width: 100px;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Visa Status Check</h2>
+        <p>Enter your ID Card Number to check visa approval.</p>
+        <input type="text" id="idNumber" placeholder="Enter your ID Card Number">
+        <button onclick="checkVisa()">Check Visa</button>
+        <div id="result">
+            <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Approved">
+            <p>🎉 Congratulations! Your Visa is Approved! 🎉</p>
+        </div>
+    </div>
+    <script>
+        function checkVisa() {
+            var id = document.getElementById("idNumber").value;
+            if (id) {
+                document.getElementById("result").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
